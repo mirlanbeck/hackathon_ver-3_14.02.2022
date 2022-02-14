@@ -1,6 +1,8 @@
 import axios from 'axios';
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useEffect, useReducer, useState } from 'react';
 import { API } from '../Helpers/Constants';
+import { auth } from '../Firebase';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 
 export const productContext = createContext()
 
@@ -82,6 +84,32 @@ const ProductContextProvider = ({children}) => {
        await axios.delete(`${API}/${id}`)
        getProducts()
     }
+
+        // ! SIGN IN, SIGN UP
+
+        function signUp(email, password){
+            return createUserWithEmailAndPassword(auth, email, password)
+        }
+    
+    
+        function signIn(email, password){
+            return signInWithEmailAndPassword(auth, email, password)
+        }
+    
+        function logout(){
+            return signOut(auth)
+        }
+    
+        function useAuth(){
+            const [currentUser, setCurrentUser] = useState()
+    
+            useEffect(() => {
+                const unsub = onAuthStateChanged(auth, user => setCurrentUser(user))
+                return unsub
+            }, [])
+    
+            return currentUser
+        }
     
     return (
         <productContext.Provider value={{
@@ -90,6 +118,7 @@ const ProductContextProvider = ({children}) => {
             editProduct,
             saveEditedProduct,
             deleteProduct,
+            useAuth,
             edit: state.edit,
             products: state.products,
             paginatedPages: state.paginatedPages
