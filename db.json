@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "title": "Leica S (Typ 006)",
+      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/1347910998_360x.jpg?v=1484754685",
+      "price": "15995",
+      "id": 1
+    },
+    {
+      "title": "LEICA S (TYP 007) resr",
+      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/emo_Leica_S_Typ007_1_360x.jpg?v=1484764351",
+      "price": 16900,
+      "id": 3
+    }
+  ]
+}
