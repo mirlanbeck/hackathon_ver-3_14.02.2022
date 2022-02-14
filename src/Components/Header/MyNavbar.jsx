@@ -17,7 +17,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link, useSearchParams } from 'react-router-dom';
-import { productContext } from '../../Contexts/ProductsContext';
+import { productContext } from '../../Contexts/ProductContext';
 import { useEffect } from 'react';
 import { Button } from '@mui/material';
 

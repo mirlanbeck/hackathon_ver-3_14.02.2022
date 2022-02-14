@@ -7,10 +7,22 @@
       "id": 1
     },
     {
-      "title": "LEICA S (TYP 007) resr",
+      "title": "LEICA S (TYP 007)",
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/emo_Leica_S_Typ007_1_360x.jpg?v=1484764351",
       "price": 16900,
       "id": 3
+    },
+    {
+      "title": "LEICA S 100 SET",
+      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/100_years_s_360x.jpg?v=1484759453",
+      "price": 34500,
+      "id": 4
+    },
+    {
+      "title": "LEICA S AND SL LENS CAP E82",
+      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/E82_lens_cap_S_360x.jpg?v=1484756588",
+      "price": 60,
+      "id": 5
     }
   ]
 }
