@@ -1,7 +1,7 @@
 import { Paper, Typography } from '@mui/material';
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { productContext } from '../../../Contexts/ProductsContext';
+import { productContext } from '../../../Contexts/ProductContext';
 
 const ProductDetail = () => {
     const {id} = useParams()
@@ -12,7 +12,7 @@ const ProductDetail = () => {
     }, [id])
     return (
         <Paper elevation={3} variant='outlined'>
-            <Typography variant='h2' style={{textAlign: 'center'}}>О товаре</Typography>
+            <Typography variant='h2' style={{textAlign: 'center'}}>About product</Typography>
             {
                 detail ? (
                     <div style={{
@@ -32,12 +32,10 @@ const ProductDetail = () => {
                                  justifyContent: 'center'}}
                         >
                             <Typography variant='h3'>{detail.title}</Typography>
-                            <Typography variant='subtitle1'>{detail.type}</Typography>
-                            <Typography variant='body1'>{detail.description}</Typography>
                             <Typography variant='h4'>{detail.price}</Typography>
                         </div>
                     </div>
-                ) : (<h1>Loading...</h1>)
+                ) : (<h1>Please wait while loading...</h1>)
             }
         </Paper>
     );

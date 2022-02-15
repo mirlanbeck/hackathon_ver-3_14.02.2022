@@ -9,9 +9,10 @@ import { Link } from 'react-router-dom';
 import { IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import ShoppingCart from '@mui/icons-material/ShoppingCart';
 
 export default function ProductCard({item}) {
-    const { deleteProduct } = React.useContext(productContext)
+    const { deleteProduct, addToCart, checkProductInCart } = React.useContext(productContext)
     let icons = (
       <CardActions disableSpacing>
           <Link to={`edit/${item.id}`}>
@@ -22,22 +23,33 @@ export default function ProductCard({item}) {
           <IconButton onClick={() => deleteProduct(item.id)}>
               <DeleteIcon />
           </IconButton>
+          <IconButton onClick={() => {
+              addToCart(item)
+              checkProductInCart(item.id)
+              }
+            }
+              color={checkProductInCart(item.id) ? "secondary": "inherit"}
+            >
+              <ShoppingCart />  
+            </IconButton>
       </CardActions>
     )
     
   return (
     <Card sx={{ maxWidth: 420 }}>
-      <CardMedia
-            component="img"
-            height="300"
-            image={item.image}
-            alt={item.title}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {item.title}
-        </Typography>
-      </CardContent>
+      <Link to={`/detail/${item.id}`} style={{textDecoration: "none", color: "black"}} >
+          <CardMedia
+                component="img"
+                height="300"
+                image={item.image}
+                alt={item.title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {item.title}
+            </Typography>
+          </CardContent>
+      </Link>
       <CardContent>
         <Typography>
           ${item.price}
