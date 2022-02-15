@@ -223,9 +223,11 @@ export default function MyNavbar() {
 
           {
             currentUser ? (
-              <Button variant='success' disabled={!currentUser} onClick={handleLogOut}>
+            <Link to="/">
+                  <Button variant='success' disabled={!currentUser} onClick={handleLogOut}>
                   Log Out
               </Button>
+            </Link>  
             ) : null
           }
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
