@@ -9,6 +9,7 @@ import MyNavbar from './Components/Header/MyNavbar';
 import ProductDetail from './Components/Product/ProductDetail/ProductDetail';
 import Cart from './Components/Cart/Cart';
 import Login from './Components/Auth/Login/Login';
+import Payment from './Components/Payment/Payment';
 
 const MyRoutes = () => {
     return (
@@ -23,6 +24,7 @@ const MyRoutes = () => {
                     <Route path="/cart" element={<Cart/>} />
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>} />
+                    <Route path="/payment" element={<Payment/>} />
                 </Routes>
             </BrowserRouter>
         </ProductContextProvider>
