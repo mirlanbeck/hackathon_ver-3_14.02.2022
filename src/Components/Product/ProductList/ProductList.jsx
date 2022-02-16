@@ -35,7 +35,7 @@ const ProductList = () => {
     return (
         <Box sx={{flexGrow: 1, margin: 4}}>
             <Container maxWidth="md">
-                <Grid container spacing={{xs: 2, md: 3}} columns={{xs: 4, sm: 8, md: 12}}>
+                <Grid container spacing={{xs: 2, md: 3}} columns={{xs: 3, sm: 8, md: 12}}>
                     {
                         products ? (
                             products.map((item, index) => (
