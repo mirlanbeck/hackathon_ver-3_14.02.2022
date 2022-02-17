@@ -9,7 +9,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { productContext } from '../../Contexts/ProductContext';
 import { Button, Typography } from '@mui/material';
-import IconButton from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { calcTotalPrice } from '../../Helpers/CalcPrice';
 import { Link } from 'react-router-dom';
@@ -50,7 +49,7 @@ export default function Cart() {
             <StyledTableCell align="right">Price(g)</StyledTableCell>
             <StyledTableCell align="right">Count(g)</StyledTableCell>
             <StyledTableCell align="right">SubPrice(g)</StyledTableCell>
-            <StyledTableCell align="right">Clear cart</StyledTableCell>
+            <StyledTableCell align="right"></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -75,10 +74,7 @@ export default function Cart() {
                                 />
                             </StyledTableCell>
                             <StyledTableCell align="right">
-                                {elem.item.subPrice}
-                            </StyledTableCell>
-                            <StyledTableCell align="right">
-                                {elem.item.id}
+                                {elem.subPrice}
                             </StyledTableCell>
                             <StyledTableCell onClick={() => deleteProductInCart(elem.item.id)}>
                                 <DeleteIcon />
@@ -105,6 +101,9 @@ export default function Cart() {
                     <TableCell colSpan={3} align="right">
                         <Link to="/payment">
                             <Button className='btn-buy' variant='contained' color="success">Buy</Button>
+                        </Link>
+                        <Link to="/">
+                            <Button variant='contained' color="success">Back to main page</Button>
                         </Link>
                     </TableCell>
                 </TableRow>
