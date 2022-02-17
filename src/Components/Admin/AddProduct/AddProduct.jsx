@@ -7,7 +7,8 @@ export default function AddProduct() {
     const [values, setValues] = useState({
         title: "",
         image: "",
-        price: ""
+        price: "",
+        type: ""
     })
     
     const { addProduct } = useContext(productContext)
@@ -75,6 +76,14 @@ export default function AddProduct() {
                             value={values.price}
                             variant="outlined"
                             label="Price"
+                            />
+                          <TextField
+                            style={{padding: "10px"}}
+                            name="type"
+                            onChange={handleInp}
+                            value={values.type}
+                            variant="outlined"
+                            label="Type"
                             />
                       </form>
                       <Button onClick={handleSave} variant='contained' color='warning'>Add product</Button>

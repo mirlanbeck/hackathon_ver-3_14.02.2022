@@ -2,6 +2,7 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import StickyFooter from '../StickyFooter/StickyFooter';
 import Content from './Content/Content';
+import Sidebar from './Sidebar/Sidebar';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 </div>
             </div>
             <Grid spacing-md={3} spacing-sm={3}>
+                {/* <Sidebar /> */}
                 <Content />
             </Grid> 
             <StickyFooter/> 

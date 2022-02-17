@@ -9,6 +9,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { productContext } from '../../Contexts/ProductContext';
 import { Button, Typography } from '@mui/material';
+import IconButton from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { calcTotalPrice } from '../../Helpers/CalcPrice';
 import { Link } from 'react-router-dom';
 
@@ -33,7 +35,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function Cart() {
     
-    const { cart, getCart, changeProductCount } = React.useContext(productContext)
+    const { cart, getCart, changeProductCount, deleteProductInCart } = React.useContext(productContext)
     React.useEffect(() => {
         getCart()
     }, [])
@@ -48,6 +50,7 @@ export default function Cart() {
             <StyledTableCell align="right">Price(g)</StyledTableCell>
             <StyledTableCell align="right">Count(g)</StyledTableCell>
             <StyledTableCell align="right">SubPrice(g)</StyledTableCell>
+            <StyledTableCell align="right">Clear cart</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -74,6 +77,12 @@ export default function Cart() {
                             <StyledTableCell align="right">
                                 {elem.item.subPrice}
                             </StyledTableCell>
+                            <StyledTableCell align="right">
+                                {elem.item.id}
+                            </StyledTableCell>
+                            <StyledTableCell onClick={() => deleteProductInCart(elem.item.id)}>
+                                <DeleteIcon />
+                            </StyledTableCell>
                             
                         </StyledTableRow>
                     ))}
@@ -95,7 +104,7 @@ export default function Cart() {
                 <TableRow>
                     <TableCell colSpan={3} align="right">
                         <Link to="/payment">
-                            <Button variant='contained' color="success">Buy</Button>
+                            <Button className='btn-buy' variant='contained' color="success">Buy</Button>
                         </Link>
                     </TableCell>
                 </TableRow>

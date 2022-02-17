@@ -23,7 +23,7 @@ const CreditCard = () => {
     <>
       {/* <div className="rccs__card backcolor"> */}
 
-      <div clasName="rccs__card rccs__card--unknown">
+      <div className="rccs__card rccs__card--unknown mt-5">
         <Cards
           number={number}
           name={name}
