@@ -183,6 +183,20 @@ const ProductContextProvider = ({children}) => {
         return newCart.length > 0 ? true : false
     }
     
+    //! Delete product in cart
+    const deleteProductInCart = (id) => {
+        let deleteCart = JSON.parse(localStorage.getItem('cart'))
+        deleteCart.products = deleteCart.products.filter(
+            (elem) => elem.item.id !== id
+        )
+        localStorage.setItem("cart", JSON.stringify(deleteCart))
+        getCart()
+        dispatch({
+            type: "CHANGE_CART_COUNT",
+            payload: deleteCart.products.length
+        })
+    }
+    
     //! Get detail functionality
     
     const getDetail = async (id) => {
@@ -233,6 +247,7 @@ const ProductContextProvider = ({children}) => {
             getCart,
             checkProductInCart,
             changeProductCount,
+            deleteProductInCart,
             getDetail,
             useAuth,
             signUp,

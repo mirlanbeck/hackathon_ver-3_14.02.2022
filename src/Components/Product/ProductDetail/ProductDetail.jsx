@@ -33,6 +33,7 @@ const ProductDetail = () => {
                         >
                             <Typography variant='h3'>{detail.title}</Typography>
                             <Typography variant='h4'>{detail.price}</Typography>
+                            <Typography variant='h4'>{detail.type}</Typography>
                         </div>
                     </div>
                 ) : (<h1>Please wait while loading...</h1>)

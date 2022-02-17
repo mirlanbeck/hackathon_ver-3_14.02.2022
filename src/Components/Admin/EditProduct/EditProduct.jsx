@@ -8,7 +8,8 @@ export default function EditProduct() {
     const [values, setValues] = useState({
         title: "",
         image: "",
-        price: ""
+        price: "",
+        type: ""
     })
     
     const { edit, editProduct, saveEditedProduct} = useContext(productContext)
@@ -90,6 +91,14 @@ export default function EditProduct() {
                             value={values.price}
                             variant="outlined"
                             label="Price"
+                        />
+                        <TextField
+                            style={{padding: "10px"}}
+                            name="type"
+                            onChange={handleEditInp}
+                            value={values.type}
+                            variant="outlined"
+                            label="Type"
                         />
                     </form>
                     <Link to="/"> 
