@@ -47,9 +47,9 @@ export default function Cart() {
             <StyledTableCell>Image</StyledTableCell>
             <StyledTableCell align="right">Title</StyledTableCell>
             <StyledTableCell align="right">Price(g)</StyledTableCell>
-            <StyledTableCell align="right">Count(g)</StyledTableCell>
-            <StyledTableCell align="right">SubPrice(g)</StyledTableCell>
-            <StyledTableCell align="right"></StyledTableCell>
+            <StyledTableCell align="center">Count(g)</StyledTableCell>
+            <StyledTableCell align="center">SubPrice(g)</StyledTableCell>
+            <StyledTableCell align="center"></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>

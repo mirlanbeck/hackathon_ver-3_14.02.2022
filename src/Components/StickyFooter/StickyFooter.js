@@ -7,7 +7,7 @@ import Link from '@mui/material/Link';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2" color="white">
       {'Copyright © '}
       <Link color="inherit" href="https://leica-camera.com/">
       Leica Camera AG
@@ -40,10 +40,11 @@ export default function StickyFooter() {
               ? theme.palette.grey[200]
               : theme.palette.grey[800],
         }}
+        style={{background: "rgb(45, 56, 67)"}}
       >
-        <Container maxWidth="sm">
-          <Typography variant="body1">
-         <h1> Leica. Das Wesentliche.</h1>
+        <Container style={{textAlign: "center", color: "whitesmoke"}} maxWidth="sm">
+          <Typography variant="body2">
+              <h4> Leica Camera AG</h4>
           </Typography>
           <Copyright />
         </Container>

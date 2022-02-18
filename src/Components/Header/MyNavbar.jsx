@@ -199,7 +199,9 @@ export default function MyNavbar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <div>
+              <img class="header-logo-image" src="https://cdn11.bigcommerce.com/s-r16b86mn51/images/stencil/60x60/leica_logo_1560440058__14081.original.png" alt="Leica Camera Inc" title="Leica Camera Inc"/>
+            </div>
           </IconButton>
           <Typography
             variant="h6"
@@ -207,13 +209,13 @@ export default function MyNavbar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            DIGITAL
+            LEICA CAMERA
           </Typography>
 
           <Box sx={{ flexGrow: 1 }} />
         {currentUser?.email === 'admin1@gmail.com' ? (
           <Link to='/add'>
-            <Button style={{background: 'white'}} variant='outlined' color='success'>Добавить</Button>
+            <Button style={{background: 'gray', marginRight: "10px"}} variant='contained' color='success'>Add</Button>
           </Link>
         ): null} 
           
@@ -224,7 +226,7 @@ export default function MyNavbar() {
           {
             currentUser ? (
               <Link to="/">
-              <Button variant='success' disabled={!currentUser} onClick={handleLogOut}>
+              <Button style={{background: "gray", color: "white", margin: "8px"}} variant='success' disabled={!currentUser} onClick={handleLogOut}>
                   Log Out
               </Button>
               </Link>
