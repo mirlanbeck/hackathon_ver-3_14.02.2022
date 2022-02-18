@@ -15,8 +15,9 @@ const Home = () => {
                 </div>
             </div>
             <Grid spacing-md={3} spacing-sm={3}>
-                {/* <Sidebar /> */}
+                
                 <Content />
+            
             </Grid> 
             <StickyFooter/> 
         </div>

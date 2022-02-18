@@ -22,11 +22,18 @@
       "type": "Camera"
     },
     {
-      "title": "LEICA S AND SL LENS CAP E82",
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/E82_lens_cap_S_360x.jpg?v=1484756588",
-      "price": 60,
+      "title": "Leica Summilux-M 90mm",
+      "image": "https://cdn11.bigcommerce.com/s-r16b86mn51/images/stencil/640w/products/2241/12915/Summilux-M_1_5-90_ASPH_FRONTAL_RGB__87416.1576095515.jpg?c=2",
+      "price": "13695",
       "id": 5,
       "type": "Lens"
+    },
+    {
+      "title": "Leica APO-Summicron",
+      "image": "https://cdn11.bigcommerce.com/s-r16b86mn51/images/stencil/640w/products/4191/16205/APO-Summicron-M_2-35_ASPH_schwarz_FRONTAL_RGB__14659.1614808671.jpg?c=2",
+      "price": "8,195",
+      "type": "Lens",
+      "id": 6
     }
   ]
 }
